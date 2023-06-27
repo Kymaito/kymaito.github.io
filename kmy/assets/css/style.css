@@ -48,7 +48,7 @@ body header .center .right a {
   position: relative;
   font-size: 1.5em;
 }
-body header .center .right a::before, body header .center .right a::after {
+body header .center .right a::before {
   content: "";
   position: absolute;
   bottom: -2px;
@@ -60,14 +60,8 @@ body header .center .right a::before, body header .center .right a::after {
 body header .center .right a::before {
   left: 0;
 }
-body header .center .right a::after {
-  right: 0;
-}
-body header .center .right a:hover::before, body header .center .right a:hover::after {
+body header .center .right a:hover::before {
   width: 100%;
-}
-body header .center .right a:hover::after {
-  transition-delay: 0.5s;
 }
 body .container#index-container {
   height: 90vh;
@@ -112,4 +106,45 @@ body .container#index-container .section-center .right .case p {
   margin-top: 15px;
   font-size: 1.2em;
   color: rgb(202, 202, 202);
+}
+
+@media screen and (max-width: 780px) {
+  body header .center .right a {
+    font-size: 1.3em;
+  }
+  body .container#index-container .section-center {
+    justify-content: start;
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  body .container#index-container .section-center .left {
+    margin-bottom: 70px;
+  }
+  body .container#index-container .section-center .left p {
+    font-size: 1.5em;
+  }
+  body .container#index-container .section-center .right .case {
+    max-width: 250px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 450px) {
+  body header .center .right a {
+    font-size: 1.3em;
+  }
+  body .container#index-container .section-center {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  body .container#index-container .section-center .left {
+    margin-bottom: 30px;
+  }
+  body .container#index-container .section-center .left p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  body .container#index-container .section-center .right .case {
+    max-width: 250px;
+    padding: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

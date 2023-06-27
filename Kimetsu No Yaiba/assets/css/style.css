@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body .center {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+}
+body .bg {
+  top: 0;
+  background: url("../img/bg01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  z-index: -20;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(0.5);
+  transition: background-image 1s ease;
+}
+body header {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  color: white;
+}
+body header .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body header .center .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body header .center .right a {
+  color: white;
+  position: relative;
+  font-size: 1.5em;
+}
+body header .center .right a::before, body header .center .right a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s ease;
+}
+body header .center .right a::before {
+  left: 0;
+}
+body header .center .right a::after {
+  right: 0;
+}
+body header .center .right a:hover::before, body header .center .right a:hover::after {
+  width: 100%;
+}
+body header .center .right a:hover::after {
+  transition-delay: 0.5s;
+}
+body .container#index-container {
+  height: 90vh;
+  display: flex;
+}
+body .container#index-container .section-center {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+body .container#index-container .section-center .left p {
+  color: white;
+  max-width: 400px;
+  font-size: 1.5em;
+}
+body .container#index-container .section-center .right .case {
+  transition: all 0.3s ease;
+  display: flex;
+  background-color: rgb(153, 42, 42);
+  height: 500px;
+  width: 350px;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+body .container#index-container .section-center .right .case:hover {
+  transform: scale(1.1);
+}
+body .container#index-container .section-center .right .case img {
+  border-radius: 50%;
+  width: 75%;
+}
+body .container#index-container .section-center .right .case h1 {
+  margin: 10px;
+  color: white;
+  font-size: 1.5em;
+}
+body .container#index-container .section-center .right .case p {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: rgb(202, 202, 202);
+}/*# sourceMappingURL=style.css.map */

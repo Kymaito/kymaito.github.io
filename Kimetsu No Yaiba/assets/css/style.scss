@@ -1,0 +1,141 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  .center {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .bg {
+    top: 0;
+    background: url("../img/bg01.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    z-index: -20;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(0.5);
+    transition: background-image 1s ease;
+  }
+
+  header {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    color: white;
+
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        a {
+          color: white;
+          position: relative;
+          font-size: 1.5em;
+
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: red;
+            transition: width 0.3s ease;
+          }
+
+          &::before {
+            left: 0;
+          }
+
+          &::after {
+            right: 0;
+          }
+
+          &:hover::before,
+          &:hover::after {
+            width: 100%;
+          }
+          &:hover::after {
+            transition-delay: 0.5s;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    &#index-container {
+      height: 90vh;
+      display: flex;
+
+      .section-center {
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        width: 100%;
+
+        .left {
+          p {
+            color: white;
+            max-width: 400px;
+            font-size: 1.5em;
+          }
+        }
+        .right {
+          .case {
+            transition: all 0.3s ease;
+            display: flex;
+            background-color: rgb(153, 42, 42);
+            height: 500px;
+            width: 350px;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            flex-direction: column;
+            align-items: center;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            img {
+              border-radius: 50%;
+              width: 75%;
+            }
+
+            h1 {
+              margin: 10px;
+              color: white;
+              font-size: 1.5em;
+            }
+
+            p {
+              margin-top: 15px;
+              font-size: 1.2em;
+              color: rgb(202, 202, 202);
+            }
+          }
+        }
+      }
+    }
+  }
+}
